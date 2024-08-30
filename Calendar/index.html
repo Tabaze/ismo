@@ -1,0 +1,192 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Calendar TopMS</title>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://uicdn.toast.com/tui.time-picker/latest/tui-time-picker.css">
+    <link rel="stylesheet" type="text/css" href="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.css">
+    <link type="image/x-icon" rel="shortcut icon" href="../image/logo/ITTONEERP.ico" />
+    <!-- <link rel="stylesheet" href="../vendors/fontawesome/css/all.css" /> -->
+    <!-- <link href="./css/style.css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" type="text/css" href="dist/tui-calendar.css">
+    <link rel="stylesheet" type="text/css" href="./css/default.css">
+    <link rel="stylesheet" type="text/css" href="./css/icons.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <style>
+        * {
+            font-size: 16px !important;
+        }
+
+        #menu span button {
+            background-color: white;
+        }
+
+        .tui-full-calendar-section-button {
+            display: flex;
+            justify-content: flex-end;
+            align-content: flex-start;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body class="bgModel">
+    <div class="container-fluid h-100">
+        <header>
+            <div class="row top-header text-white">
+                <div class="col-2 col-md-2">
+                    <span class="p-2 ms-1 fs-5 lin-h" id="homeMenu"><i class="fa-solid fa-house"></i></span>
+                    <span class="text-white-opacity fs-6 hide-on-mobile" id="nomUser">...</span>
+                </div>
+                <div class="col-6 col-md-7 menu-selector">
+                    <ul class="nav h-100 user-select-none" id="menu-header" role="menu">
+                        <!-- <li class="nav-item px-5 d-flex align-items-center" title="Famille" data-model="Famille">
+                        <span>Famille d'article</span>
+                    </li>
+                    <li class="nav-item px-5 d-flex align-items-center" title="Article" data-model="Article">
+                        <span>Article</span>
+                    </li>
+                     <li class="nav-item px-5 d-flex align-items-center" title="Bateau" data-model="Bateau">
+                        <span>Bateau</span>
+                    </li> -->
+                    </ul>
+                </div>
+                <div class="col-4 col-md-3 text-end fs-5 justify-content-end">
+                    <span class="fs-6 mx-2 text-white-opacity hide-on-mobile nomDossier">...</span>
+                    <span class="p-2" id="notification"><i class="fa-solid fa-bell"></i></span>
+                    <span class="p-2 me-2 lin-h" title="Fermer Dossier" id="ferme"><i
+                            class="fa-solid fa-right-to-bracket"></i></span>
+                </div>
+            </div>
+        </header>
+        <div id="lnb" >
+            <div class="lnb-new-schedule">
+                <button id="btn-new-schedule" type="button"
+                    class="btn btn-success  btn-block lnb-new-schedule-btn btn-input btn-rounded" data-toggle="modal">
+                    Nouveau
+                </button>
+            </div>
+            <div id="lnb-calendars" class="lnb-calendars">
+                <div>
+                    <div class="lnb-calendars-item">
+                        <label>
+                            <input class="tui-full-calendar-checkbox-square" type="checkbox" value="all" checked>
+                            <span></span>
+                            <strong>Voir tous</strong>
+                        </label>
+                    </div>
+                </div>
+                <div id="calendarList" class="lnb-calendars-d1">
+                </div>
+            </div>
+        </div>
+        <div id="right">
+            <div id="menu" style="display: flex;
+            flex-direction: row;
+            justify-content: center;align-items: center;">
+                <div class="dropdown" style="margin:5px 5px;">
+                    <button class="btn btn-light dropdown-toggle btn-rounded" type="button" id="dropdownMenuButton" style="padding: 5px 20px;"
+                        data-mdb-toggle="dropdown" aria-expanded="false">
+                        <i id="calendarTypeIcon" class="calendar-icon ic_view_month" style="margin-right: 4px;"></i>
+                        <span id="calendarTypeName">Dropdown</span>&nbsp;
+                        <!-- <i class="calendar-icon tui-full-calendar-dropdown-arrow"></i> -->
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu-calendarType">
+                        <li role="presentation">
+                            <a class="dropdown-menu-title" role="menuitem" data-action="toggle-daily">
+                                <i class="calendar-icon ic_view_day"></i>Quotidien
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a class="dropdown-menu-title" role="menuitem" data-action="toggle-weekly">
+                                <i class="calendar-icon ic_view_week"></i>Hebdomadaire
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a class="dropdown-menu-title" role="menuitem" data-action="toggle-monthly">
+                                <i class="calendar-icon ic_view_month"></i>Mois
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a class="dropdown-menu-title" role="menuitem" data-action="toggle-weeks2">
+                                <i class="calendar-icon ic_view_week"></i>2 Semaine
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a class="dropdown-menu-title" role="menuitem" data-action="toggle-weeks3">
+                                <i class="calendar-icon ic_view_week"></i>3 Semaine
+                            </a>
+                        </li>
+                        <!-- <li role="presentation" class="dropdown-divider"></li>
+                        <li role="presentation">
+                            <a role="menuitem" data-action="toggle-workweek">
+                                <input type="checkbox" class="tui-full-calendar-checkbox-square" value="toggle-workweek"
+                                    checked>
+                                <span class="checkbox-title"></span>Afficher les week-ends
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" data-action="toggle-start-day-1">
+                                <input type="checkbox" class="tui-full-calendar-checkbox-square"
+                                    value="toggle-start-day-1">
+                                <span class="checkbox-title"></span>Commencer la semaine le lundi
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" data-action="toggle-narrow-weekend">
+                                <input type="checkbox" class="tui-full-calendar-checkbox-square"
+                                    value="toggle-narrow-weekend">
+                                <span class="checkbox-title"></span>Plus étroit que les jours de semaine
+                            </a>
+                        </li> -->
+                    </ul>
+                </div>
+                <span id="menu-navi">
+                    <button type="button" class="btn btn-default btn-sm move-today btn-input btn-rounded"
+                        data-action="move-today" style="padding: 8px 20px;">Aujourd'huit</button>
+                    <button type="button" class="btn btn-default btn-sm move-day btn-input btn-rounded" data-action="move-prev" style="padding: 8px 20px;">
+                        <i class="calendar-icon ic-arrow-line-left" data-action="move-prev"></i>
+                    </button>
+                    <button type="button" class="btn btn-default btn-sm move-day btn-input btn-rounded" data-action="move-next" style="padding: 8px 20px;">
+                        <i class="calendar-icon ic-arrow-line-right" data-action="move-next"></i>
+                    </button>
+                </span>
+                <span id="renderRange" class="render-range"></span>
+            </div>
+            <div id="calendar"></div>
+            <div id="calendar-popup">
+
+            </div>
+        </div>
+    </div>
+    <button id="referesh" class="d-none"></button>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../vendors/bootstrap-5.2.0/js/bootstrap.bundle.min.js"></script>
+    <script src="../vendors/MDB5/js/mdb.min.js"></script>
+    <script src="https://uicdn.toast.com/tui.code-snippet/v1.5.2/tui-code-snippet.min.js"></script>
+    <script src="https://uicdn.toast.com/tui.time-picker/latest/tui-time-picker.min.js"></script>
+    <script src="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chance/1.0.13/chance.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../vendors/calendar/semantic.min.js"></script>
+    <script src="../vendors/calendar/calendar.min.js"></script>
+    <script src="../vendors/sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="../js//i18n.js"></script>
+    <script src="../js//ittone.js"></script>
+    <script src="../js/roles.js"></script>
+    <script src="dist/tui-calendar.js"></script>
+    <script src="./js/data/calendars.js"></script>
+    <script src="./js/data/schedules.js"></script>
+    <script type="module" src="js/data/popup.js"></script>
+    <script type="module" src="./js/app.js"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="http-equiv" content="Content-type: text/html; charset=UTF-8" />
+    <title>This is a title</title>
+    <link href="Style.css" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <select id="chnage_model" class="noprint"></select>
+        <div id="main">
+          
+            <div class="header_logo">
+  
+                <img src="logo.png" alt="" />
+            </div>
+            <div class="clr"></div>
+            <div class="wrapper">
+                <div class="wrapper-table">
+                    <table id="invoice" cellpadding="2" cellspacing="2">
+                        <tr>
+                            <td class="codetype" colspan="5"></td>
+                        </tr>
+                        <tr>
+                            <td class="th_invoice">Num</td>
+                            <td class="th_invoice">Date</td>
+                            <td class="th_invoice">Depot</td>
+                        </tr>
+                        <tr>
+                            <td class="Num"></td>
+                            <td class="Date"></td>
+                            <td class="Depot"></td>
+                        </tr>
+                        <tr>
+                            <td class="th_invoice">Echéance</td>
+                            <td colspan="2" class="Echeanche"></td>
+                        </tr>
+                        <tr>
+                            <td class="th_invoice">Réglement</td>
+                            <td class="Rglm"></td>
+                            <td class="numRGL"></td>
+                        </tr>
+
+                    </table>
+                    <table id="client">
+                        <tr>
+                            <td class="th_client">Compte:</td>
+                            <td class="code"></td>
+                        </tr>
+                        <tr>
+                            <td class="th_client">Tier:</td>
+                            <td class="Nom"></td>
+                        </tr>
+                        <tr>
+                            <td class="th_client">Info:</td>
+                            <td class="info"></td>
+                        </tr>
+                        <tr>
+                            <td class="th_client">ICE:</td>
+                            <td class="Ice"></td>
+                        </tr>
+                    </table>
+                    <table cellpadding="5" cellspacing="5" border="0" style="margin-top:30px;">
+                        <tbody id="table_line">
+                            <tr class="short_row">
+                                <th class="short_cell">Réference</th>
+                                <th class="short_cell ">Désignation</th>
+                                <th class="short_cell ">Quantité</th>
+                                <th class="short_cell">P.U TTC</th>
+                                <th class="short_cell">%Remise</th>
+                                <th class="short_cell">%TVA</th>
+                                <th class="short_cell">Montant HT</th>
+                                <th class="short_cell">TOTAL</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div id="div-foter">
+                        
+                        <table id="tfoot_table"></table>
+                        <table id="tfoot_taux">
+                            <tr><td class="cell" style="text-align: center !important;">Taux</td><td class="cell" style="text-align: center !important;">Taxe</td><td class="cell" style="text-align: center !important;">Base</td></tr>
+                        </table>
+                        <table id="tfoot_avance">
+                            <tr>
+                                <td class="cell" style="text-align: center !important;width:50%;">Avance</td>
+                                <td class="cell" style="text-align: center !important;">Reste à Payer</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="montantWord" style="position: fixed;bottom: 140px;font-size: 14pt;width: 740px;"></div>
+            <div class="footer">
+
+            </div>
+        </div>
+    </div>
+    <script src="../../js/jquery-2.1.1.min.js" charset="utf-8"></script>
+    <script src="../../vendors/NombreEnLettre/JavaScript.js"></script>
+    <script type="text/javascript" src="core.js" charset="UTF-8"></script>
+</body>
+</html>

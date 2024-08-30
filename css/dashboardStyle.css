@@ -1,0 +1,340 @@
+:root {
+    --white-95: rgba(255, 255, 255, 0.95);
+    --white-85: rgba(255, 255, 255, 0.85);
+    --white-75: rgba(255, 255, 255, 0.75);
+    --white-50: rgba(255, 255, 255, 0.5);
+    --white-25: rgba(255, 255, 255, 0.25);
+    --white-2: rgba(255, 255, 255, 0.2);
+    --black-75: rgba(0, 0, 0, 0.75);
+    --black-50: rgba(0, 0, 0, 0.5);
+    --black-35: rgba(0, 0, 0, 0.35);
+    --black-25: rgba(0, 0, 0, 0.25);
+    --black-2: rgba(0, 0, 0, 0.2);
+    --black-15: rgba(0, 0, 0, 0.15);
+    --black: #000000;
+    --dimGrey: #696969;
+    --light-grey: #9e9ea4;
+    --white: #FFFFFF;
+    --white-smook: #ebebeb;
+    --dark-blue: #1d2634;
+    --dark-blue-2: #212529;
+    --grey-blue: #263043;
+    --color-ittone: #0d3583;
+    --color-ittone-1: #06283d;
+    --color-ittone-2: #0d3583;
+    --color-ittone-3: #2a68e4;
+    --color-ittone-4: #ececec;
+    --blue-purple: #7992d7;
+    --orange: #f19754;
+    --green: #568158;
+    --green-2: #00b74a;
+    --red: #d55a5a;
+  }
+  body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-ittone-4);
+    color: var(--light-grey);
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  /* h1,h2,h3,h4{
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+  } */
+  
+  .material-icons-outlined {
+    vertical-align: middle;
+    line-height: 1px;
+    font-size: 35px;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: 260px 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+      "sidebar header header header"
+      "sidebar main main main";
+    height: 100vh;
+  }
+  
+  /* ---------- HEADER ---------- */
+  
+  .header {
+    grid-area: header;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px 0 30px;
+    box-shadow: 0 6px 7px -3px var(--black-35);
+    background-color: var(--color-ittone);
+  }
+  
+  .menu-icon {
+    display: none;
+  }
+  
+  .iconNotification {
+    font-size: 25pt;
+    padding: 20px;
+    color: var(--white);
+    margin-right: 4px;
+    margin-left: 40px;
+  }
+  
+  .iconNotification:hover {
+    color: var(--white);
+    background-color: var(--green-2);
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  #AccountUser {
+    font-size: 25pt;
+    padding: 20px;
+    color: var(--white);
+    margin-right: -27px;
+    margin-left: 3px;
+  }
+  
+  #AccountUser:hover {
+    color: var(--white);
+    background-color: var(--red);
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  /* ---------- SIDEBAR ---------- */
+  
+  #sidebar {
+    grid-area: sidebar;
+    height: 100%;
+    background-color: var(--color-ittone);
+    overflow-y: auto;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+  }
+  
+  .sidebar-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px 30px 30px;
+    margin-bottom: 30px;
+    color: var(--white);
+  }
+  
+  .sidebar-title>span {
+    display: none;
+  }
+  
+  .sidebar-brand {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
+  .sidebar-list {
+    padding: 0;
+    margin-top: 15px;
+    list-style-type: none;
+  }
+  
+  .sidebar-list-item {
+    padding: 20px 20px 20px 20px;
+    font-size: 18px;
+  }
+  
+  .sidebar-list-item:hover {
+    background-color: var(--white-2);
+    cursor: pointer;
+  }
+  
+  .sidebar-list-item>a {
+    text-decoration: none;
+    color: var(--white);
+  }
+  
+  .sidebar-responsive {
+    display: inline !important;
+    position: absolute;
+    z-index: 12 !important;
+  }
+  
+  .IttOneLogo {
+    height: 50px;
+    width: 92%;
+    vertical-align: middle;
+    position: relative;
+    top: -28px;
+  }
+  
+  /* ---------- MAIN ---------- */
+  
+  .container{
+    width: 100%;
+  }
+  
+  .main-container {
+    grid-area: main;
+    overflow-y: auto;
+    padding: 20px 20px;
+    color: var(--white-95);
+  }
+  
+  .main-title {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .ui.calendar.date_range {
+    display: inline;
+  }
+  
+  .ui.popup.calendar {
+    z-index: 254555;
+  }
+  
+  #DivCalendar {
+    margin: auto;
+    display: flex;
+  }
+  
+  #filterDate {
+    background-color: transparent;
+    color: var(--color-ittone);
+    border: none;
+    font-size: 25px;
+    font-weight: 900;
+  }
+  
+  #filterDate:hover {
+    background-color: var(--color-ittone);
+    color: var(--white);
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .main-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    margin: 20px 0;
+    color: var(--black);
+  }
+  
+  .card-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .card-inner>.material-icons-outlined {
+    font-size: 45px;
+  }
+  
+  .charts {
+    display: block;
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .charts-card {
+    box-sizing: border-box;
+    -webkit-column-break-inside: avoid;
+    border-radius: 5px;
+    border-color: var(--black);
+  }
+  
+  .chart-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--black);
+  }
+  
+  /* ---------- MEDIA QUERIES ---------- */
+  /* Medium <= 992px */
+  
+  @media screen and (max-width: 992px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.2fr 3fr;
+      grid-template-areas:
+        "header"
+        "main";
+    }
+  
+    #sidebar {
+      display: none;
+    }
+  
+    .menu-icon {
+      display: inline;
+    }
+  
+    .sidebar-title>span {
+      display: inline;
+    }
+  }
+  
+  /* UI Calendar */
+  i.icon {
+    font-family: 'FontAwesome';
+  }
+  
+  /* Clients Fidèles Div */
+  
+  .all-users {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem .7rem;
+  
+  }
+  
+  .user-contact span {
+    font-size: 1.2rem;
+    display: inline-block;
+    margin-left: .5rem;
+  }
+  
+  .fa-whatsapp {
+    color: #128C7E;
+    cursor: pointer;
+  }
+  
+  .fa-phone {
+    color: #1DB954;
+    cursor: pointer;
+  }
+  
+  .fa-bars {
+    cursor: pointer;
+  }
+  
+  /* Small <= 768px */
+  
+  @media screen and (max-width: 768px) {
+    .main-cards {
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-bottom: 0;
+    }
+  
+    .charts {
+      grid-template-columns: 1fr;
+      margin-top: 30px;
+    }
+  }
+  
+  /* Extra Small <= 576px */
+  
+  @media screen and (max-width: 576px) {
+    .hedaer-left {
+      display: none;
+    }
+  }

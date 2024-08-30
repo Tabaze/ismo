@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../vendors/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 id="menu-title"> Menu </h1>
+        <header>
+            <div class="row ">
+                <div class="col-xs-7 col-centered">
+                    <div class="lists">
+                        <ul class="list">
+                            <li> Chicken Breast <span>.................</span><b>$19.50</b></li>
+                            <li> Fresh Grilled Asparagus<span>......</span><b>$25.00</b></li>
+                            <li>Pork-Stuffed Skins<span>.............</span><b>$25.50</b></li>
+                            <li> Grilled Chicken<span>.................</span><b>$25.49</b></li>
+                            <li> Steak Frites<span>.....................</span><b>$25.00</b></li>
+                        </ul>
+                    </div>
+                    <div id="total"></div>
+                </div>
+            </div>
+        </header>
+
+
+    </div>
+
+    <script src="../../js/jquery-2.1.1.min.js"></script>
+    <script src="core.js" type="module"></script>
+    <!-- <script>
+        test();
+
+        function test() {
+            let json;
+            $('#content').find('ul').html('');
+            $.ajax({
+                type: 'POST',
+                url: 'Default.aspx/getJsonScreen',
+                async: true,
+                data: "",
+                contentType: 'application/json; charset =utf-8',
+                success: function(data) {
+                    json = JSON.parse(data.d);
+                    for (var i in json) {
+                        $('#content').find('ul').append('<li>' + json[i].name + '/ ' + json[i].price + '</li>');
+                    }
+                },
+                error: function(result) {
+                    alert("Error Occured, Try Again");
+                }
+            });
+
+            console.log('t')
+
+        }
+
+        setInterval(function() {
+            test();
+        }, 1000);
+        // $.ajax({
+        //     type: 'POST',
+        //     url: 'Default.aspx/setJsonScreen',
+        //     async: false,
+        //     data: JSON.stringify(fff),
+        //     contentType: 'application/json; charset =utf-8',
+        //     success: function(data) {
+        //         //console.log(JSON.parse(data.d));
+        //     },
+        //     error: function(result) {
+        //         alert("Error Occured, Try Again");
+        //     }
+        // });
+    </script> -->
+</body>
+
+</html>

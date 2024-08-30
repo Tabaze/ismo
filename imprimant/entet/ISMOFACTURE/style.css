@@ -1,0 +1,26 @@
+.pageBreak {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  overflow: auto;
+  z-index: -1;
+}
+.pageBreak footer img {
+  opacity: 1;
+}
+@media print {
+  @page {
+    padding: 10px;
+    margin: 0;
+    border-top: 1px solid #000;
+    /* margin-top:50px; */
+  }
+ @page :first {
+    margin: 0;
+    margin-top: 0;
+  }
+}
+
+/* style="border: 5px gold solid;padding: 5px;margin: 0;" */

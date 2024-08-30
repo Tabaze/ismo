@@ -1,0 +1,113 @@
+body {
+    background: #eee;
+}
+#search {
+    line-height: 2 !important;
+}
+
+/* Style Menu Files */
+
+.file-box {
+    float: left;
+    width: 220px;
+}
+.file-manager h5 {
+    text-transform: uppercase;
+}
+.file-manager {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+.folder-list li a {
+    color: #666666;
+    display: block;
+    padding: 5px 0;
+}
+.folder-list li {
+    border-bottom: 1px solid #e7eaec;
+    display: block;
+}
+.folder-list li i {
+    margin-right: 8px;
+    color: #3d4d5d;
+}
+
+/* Style Card Files */
+
+.card-box {
+    padding: 20px;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    background-color: #fff;
+}
+.file-man-box {
+    padding: 20px;
+    border: 1px solid #e3eaef;
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 20px
+}
+.file-man-box .file-close {
+    color: #f1556c;
+    position: absolute;
+    line-height: 24px;
+    font-size: 24px;
+    right: 10px;
+    top: 10px;
+    visibility: hidden
+}
+.file-man-box .file-img-box {
+    line-height: 120px;
+    text-align: center
+}
+.file-man-box .file-img-box img {
+    height: 64px
+}
+.file-man-box .file-download {
+    font-size: 32px;
+    color: #98a6ad;
+    position: absolute;
+    right: 10px
+}
+.file-man-box .file-download:hover {
+    color: #313a46
+}
+.file-man-box .file-man-title {
+    padding-right: 25px
+}
+.file-man-box:hover {
+    -webkit-box-shadow: 0 0 24px 0 rgba(0, 0, 0, .06), 0 1px 0 0 rgba(0, 0, 0, .02);
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, .06), 0 1px 0 0 rgba(0, 0, 0, .02)
+}
+.file-man-box:hover .file-close {
+    visibility: visible
+}
+.text-overflow {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+h5 {
+    font-size: 15px;
+}
+#loadFiles:hover {
+    background-color: #f11637;
+    color: white;
+}
+
+
+@media (min-width: 1800px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1800px;
+    }
+
+}

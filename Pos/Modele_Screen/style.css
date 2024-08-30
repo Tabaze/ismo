@@ -1,0 +1,48 @@
+#menu-title {
+    margin-top: 100px;
+    width: 100%;
+    font-size: 3em;
+    font-family: 'Amatic SC';
+    font-weight: bold;
+    text-align: center;
+}
+
+.lists .list,
+#total {
+    position: relative;
+    list-style: none;
+    color: #535353;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 1.10em;
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+header {
+    border: 3px solid;
+    height: auto;
+    position: relative;
+    padding: 10px;
+    min-height: 200px;
+}
+
+body {
+    background-image: url("background1.jpg");
+}
+
+#nameMenu {
+    padding: 10px;
+}
+
+.list b {
+    padding-left: 10px;
+}
+
+#total {
+    float: right;
+    font-size: 1.9rem;
+}

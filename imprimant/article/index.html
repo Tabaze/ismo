@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        .imgs {
+            page-break-before: always;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding-top: 150px;
+        }
+        .imgs:first-of-type {
+            padding-top: 80px;
+        }
+
+        /* 
+        .imgs+* {
+            margin-top: 20mm;
+        } */
+
+        table {
+            width: 80%;
+            margin: auto;
+        }
+
+        table:first-of-type {
+            margin-top: 150px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 40px;
+            z-index: -1;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 60px;
+            left: 0;
+            width: 100%;
+            height: 40px;
+            z-index: -1;
+        }
+
+        @media print {
+            .pageBreak {
+                position: fixed;
+                bottom: 0px;
+                left: 0;
+                right: 0;
+                top: 0;
+                overflow: auto;
+                z-index: -1;
+            }
+
+
+            body:after {
+                /* content: url('./QUADRA 5 ANNEE 1997_ssp (2)_files/ISMO PIED DE PAGE 2.jpg'); */
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 25%;
+                height: 50px;
+                z-index: -1;
+            }
+
+            .allPage {
+                page-break-before: always;
+                text-align: center;
+                margin-top: 10mm ;
+            }
+
+            @page {
+                margin: 0;
+                padding: 100px;
+            }
+
+            @page: first {
+                margin: 0;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pageBreak">
+        <header style="text-align: center;">
+            <img src="./QUADRA 5 ANNEE 1997_ssp (2)_files/ISMO ENTETE 2.jpg" alt="" srcset="" width="90%"
+                height="100px">
+        </header>
+        <footer style="position: absolute;text-align: start;width: 100%;    display: flex;
+                                                                            flex-wrap: nowrap;
+                                                                            flex-direction: row;
+                                                                            align-items: center;
+                                                                            justify-content: center;
+                                                                        ">
+            <img src="./QUADRA 5 ANNEE 1997_ssp (2)_files/ISMO PIED DE PAGE 2.jpg" alt="" srcset="" width="95%"
+                style="margin: auto;" height="100px">
+        </footer>
+    </div>
+    <div class=WordSection1>
+
+        <div class="des" style="">
+            <p class=MsoNormal style='margin-left:0in;text-indent:0in;line-height:107%;margin-top: 150px;'><b><span
+                        style='font-size:18.0pt;line-height:107%' id="nomArticle">QUADRA 5 </span></b></p>
+
+            <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:24.5pt;
+    margin-left:-1.45pt;text-indent:0in;line-height:107%'><span style='font-size:
+    11.0pt;line-height:107%'><img width='100%' height=1 id="Group 4852"
+                        src="QUADRA%205%20ANNEE%201997_ssp%20(2)_files/image031.gif"></span></p>
+
+            <p class=MsoNormal style='margin-bottom:13.95pt'>Designation du matériel: </p>
+
+            <div id="descr">
+
+            </div>
+
+
+        </div>
+        <table>
+            <tr>
+                <th valign=top style='width:3.45in;border:solid black 1.0pt;
+          padding:2.4pt 5.75pt 0in .05in;height:14.9pt'>
+                    <span style='font-size:11.0pt;line-height:107%' id="etat">Moules
+                        Neufs/ NEW MOLDS </span>
+                </th>
+            </tr>
+        </table>
+        <table class='TableGrid' border=0 cellspacing=0 cellpadding=0 style="border-collapse: collapse;">
+
+        </table>
+
+        <div class="allPage" style="margin-top: 101px;">
+            
+        </div>
+    </div>
+    <script src="../../js/jquery-3.6.0.min.js" charset="utf-8"></script>
+    <script src="../../vendors/sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="../../js/moment.js" charset="utf-8"></script>
+    <script src="../../js/currency.min.js"></script>
+    <script src="../../js/menu.js"></script>
+    <script src="../../js/i18n.js"></script>
+    <script src="../../vendors/NombreEnLettre/JavaScript.js"></script>
+    <script src="../../vendors/html2canvas/jspdf.min.js"></script>
+    <script src="../../js/ittone.js"></script>
+    <script src="../global.js"></script>
+    <script type="module" src="core.js"></script>
+</body>
+
+</html>

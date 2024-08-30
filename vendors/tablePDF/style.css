@@ -1,0 +1,97 @@
+/* --------Entet--------- */
+
+#entet {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
+
+
+/* --------Panel--------- */
+
+#panel {
+    margin: auto;
+    width: 70%;
+}
+
+#panel tr td {
+    text-align: center;
+    padding: 5px;
+}
+
+#panel tr {
+    background-color: rgb(207, 207, 207);
+}
+
+
+/* --------title--------- */
+
+#title {
+    width: 100%;
+}
+
+#title tr td {
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/* --------table--------- */
+
+#table {
+    margin: auto;
+    text-align: center;
+}
+
+#table tr:nth-child(even) {
+    background: rgb(201, 201, 201);
+}
+
+#table tr:nth-child(odd) {
+    background: rgb(254, 255, 255);
+}
+
+#table thead tr th {
+    color: rgb(255, 255, 255);
+    background-color: rgb(114, 114, 116);
+}
+
+.table td {
+    text-align: center;
+    padding: 10 0;
+}
+
+.table th {
+    text-align: center;
+    padding: 10 0;
+}
+
+#table thead tr {
+    color: cornsilk;
+    background-color: rgb(50, 50, 252);
+}
+
+
+/* --------Button--------- */
+
+#footer {
+    max-width: 200px;
+}
+
+#footer thead tr th {
+    color: rgb(255, 255, 255);
+    background-color: rgb(114, 114, 116);
+}
+
+#footer,
+#footer th,
+#footer td {
+    padding: 5px;
+    border: 1px solid gray;
+}
+.headPension {
+    background-color: #1F2605;
+    color: white;
+    font-weight: bold;
+  }

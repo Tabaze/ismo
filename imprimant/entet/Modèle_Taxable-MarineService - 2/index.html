@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="http-equiv" content="Content-type: text/html; charset=UTF-8" />
+    <title>This is a title</title>
+    <link href="Style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <select id="chnage_model" class="noprint"></select>
+        <div id="main">
+            <!-- <div class="header_logo">
+                <img src="logo.png" alt="" />
+            </div> -->
+            <!-- <div class="clr"></div> -->
+            <div class="wrapper">
+                <div class="wrapper-table">
+                    <div>
+                        <table id="client" style="height:70px;margin-bottom: 20px;">
+                            <thead>
+                                <th style="text-align: start;"> Déclarant : </th>
+                            </thead>
+                            <tbody style="border: 1px solid black;text-align: center;">
+                                <tr>
+                                    <td id="code"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table id="invoice">
+                            <tbody style="border: 1px solid black;">
+                                <tr>
+                                    <td class="th_invoice">N° Facture</td>
+                                    <td class="th_invoice">Date</td>
+                                    <td class="th_invoice">Période Facturée</td>
+                                    <td class="th_invoice" colspan="2" style="width: 40%;">Nom De <span id="propriete"></span></td>
+                                </tr>
+                                <tr>
+                                    <td id="numFactur"></td>
+                                    <td id="dateEntet"></td>
+                                    <td id="periodeFacture">Du <span class="de"></span><input type="string" class="de">
+                                        au: <span class="a"></span><input class="a" type="string"></td>
+                                    <td id="valeurProp" colspan="2"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <table cellpadding="5" cellspacing="5" border="0" style="margin-top:10px;">
+                        <tbody id="table_line">
+                            <tr style="border-top: 1px solid black; border-bottom: 1px solid black;">
+                                <th class="short_cell">Date</th>
+                                <th class="short_cell ">Quantité</th>
+                                <th class="short_cell ">Désignation</th>
+                                <!-- <th class="short_cell">P.U</th> -->
+                                <th class="short_cell">Non Taxable</th>
+                                <!-- <th class="short_cell">%Remise</th> -->
+                                <!-- <th class="short_cell">%TVA</th> -->
+                                <th class="short_cell">Taxable</th>
+                                <!-- <th class="short_cell">Montant HT</th> -->
+                                <!-- <th class="short_cell">TOTAL</th> -->
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td class="cellTVA"></td>
+                                <td class="cellTVA"></td>
+                                <td class="cellTVA" style="text-align: left; font-size: 14px;">TVA 20%</td>
+                                <td class="cellTVA"></td>
+                                <td class="cellTVA totalTva" style="text-align: right;"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" rowspan="2" style="border: 1px solid black;font-size: 14px;"><span
+                                        class="piecesJ"></span><input type="text" class="piecesJ" style="width: 90%;">
+                                </td>
+                                <td class="cellTd number nonTaxable"></td>
+                                <td class="cellTd number taxable"></td>
+                            </tr>
+                            <tr>
+                                <td class="cellFooter">Total à Payer</td>
+                                <td class="cellTd number totalPayer"></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <div id="div-foter">
+                        <table id="tfoot_table"></table>
+                        <!-- <table id="tfoot_taux">
+                            <tr>
+                                <td class="cell" style="text-align: center !important;">Taux</td>
+                                <td class="cell" style="text-align: center !important;">Taxe</td>
+                                <td class="cell" style="text-align: center !important;">Base</td>
+                            </tr>
+                        </table> -->
+                        <!-- <table id="tfoot_avance">
+                            <tr>
+                                <td class="cell" style="text-align: center !important;width:50%;">Avance</td>
+                                <td class="cell" style="text-align: center !important;">Reste à Payer</td>
+                            </tr>
+                        </table> -->
+                    </div>
+                </div>
+            </div>
+            <!-- <div id="montantWord" style="position: fixed;bottom: 200px;font-size: 14pt;width: 740px;margin: 20px;">
+            </div> -->
+            <div class="Terms">
+                <p>
+                    <span>Mode de paiement : <span id="nomModRglm"></span></span>
+                    <span id="terms">
+
+                    </span>
+                </p>
+            </div>
+            <!-- <div class="footer">
+            </div> -->
+        </div>
+    </div>
+    <script src="../../../js/jquery-3.6.0.min.js" charset="utf-8"></script>
+    <script src="../../../vendors/sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="../../../js/moment.js" charset="utf-8"></script>
+    <script src="../../../js/currency.min.js"></script>
+    <script src="../../../js/menu.js"></script>
+    <script src="../../../js/i18n.js"></script>
+    <script src="../../../vendors/NombreEnLettre/JavaScript.js"></script>
+    <script src="../../../js/ittone.js"></script>
+    <script src="../../global.js"></script>
+    <script type="module" src="core.js" charset="UTF-8"></script>
+</body>
+
+</html>

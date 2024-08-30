@@ -1,0 +1,262 @@
+body{
+    background: #FFFFFF;
+    font-size: 8pt;
+        }
+.bold {
+    font-weight:bold;
+        }
+.clr {
+    clear: both;
+      }
+.cell.number{
+    text-align: right;
+    width: 170px;
+}
+.invoice-title {
+    font-size: 14pt;
+    color:#734B3A;
+    margin:25px 0 15px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+th {
+    text-align: center;
+    color:#0087C3;
+}
+.variation {
+    font-size: 11px;
+}
+#main_container {
+    width:100%;
+    margin:0 0 30px 0;
+}
+#main {
+    width:740px;
+    margin:auto;
+}
+#main .header_logo {
+    text-align: center;
+    margin:15px 0 15px 0;
+    font-size: 24px;
+    font-weight: bold;
+    color:#000000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#main .wrapper {
+    border:1px solid #EFECDC;
+    background-color:#FFFFFF;
+}
+#main .wrapper-table {
+    margin:0 0 0 0;
+}
+.short_cell {    
+    /*border: 1px solid black;*/
+    border-left: 1px solid black;
+}
+.short_row{
+    border: 1px solid black;
+}
+.short_cell.text{
+    text-align: left;
+}
+.short_cell.text.desc{
+    width: 316px;
+
+}
+.short_cell.number{
+    text-align: right;
+}
+.short_cell:last-child {
+    border-right: 1px solid black;
+}
+tr:last-child .short_cell{
+    border-bottom: 1px solid black;
+}
+@media all {
+    .page-break  { display:none; }
+    .thead_break{display: none; }
+    .tfoot{display: none;}
+}
+
+@media print {
+    .page-break  { display:block; page-break-before:always; }
+    .noprint { display: none; }
+    .thead_break{display: table-row;}
+    .tfoot{display: table-row;}
+}
+body{
+    margin-top: 145px;
+}
+#main .header_logo{
+    font-size: 0.9em;
+    font-weight: normal;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    line-height: 0.5em;
+    padding-bottom: 10px;
+    border-bottom: #0087C3 solid 2px;
+    position: fixed;
+    top: 0;
+    width: 740px;
+    background-color: #fff
+
+}
+#main .header_logo img{
+    height: 120px;
+}
+#main .wrapper{
+    border:none;
+}
+.footer {
+    background: #fff;
+    text-align: center;
+    padding: 5px 0;
+    position: fixed;
+    bottom: 30px;
+    width: 740px;
+    border-top: #0087C3 solid 2px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.footer a{
+    color: #fff;
+    text-decoration: none;
+}
+.footer .spacer {
+  font-size: 0.5em;
+  padding: 0 10px;
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+}
+.page-break{
+    height: 561px;
+    width: 100%;
+
+}
+       
+.page-break:last-child{
+    display: none;
+}
+.thead2 {
+    border: 1px solid black;
+}
+.tfoot .short_cell {
+    border-top: 1px solid black;
+    border-left: 0px;
+    border-right: 0px; 
+}
+thead {display: table-header-group;}
+tfoot {display: table-footer-group;}
+tbody {display: table-row-group;}
+ 
+.total td{
+    border-top: 1px solid black;
+}
+@page { size: A4;  margin: 0mm; }
+#tfoot_table .cell{
+    border: 1px solid black;
+    font-size: 12pt;
+    padding:1px;
+} 
+#tfoot_table{
+    float: right;width: 40%;
+}
+#div-foter{
+    margin-top: 10px;
+}
+
+#client{
+    float: right;
+    width: 320px;
+    margin-bottom: 2px;
+    font-size:12pt;
+    margin-top: 10px;
+}
+#client tr{
+    border-bottom: ridge 2px #0087C3;
+}
+#invoice{
+    width: 350px;
+    display: inline-table;
+    font-size: 12pt;
+}
+#client td{
+    padding: 3px;
+}
+#invoice td:not(.codetype){
+   border:solid 1px;
+   padding: 3px;
+   text-align:center;
+   /* width:75%; */
+}
+.short_cell_breack{
+  border-left: 1px solid black;
+}
+.short_cell_breack:last-child {
+    border-right: 1px solid black;
+}
+tr:last-child .short_cell_breack{
+    border-bottom: 1px solid black;
+}
+#invoice .codetype{
+    font-size: 1.5rem;
+    color: #0087C3;
+    margin: 0;
+    font-weight: bold;
+}
+#invoice .th_invoice{
+    font-weight: bold;
+}
+#client .th_client{
+    font-weight: bold;
+}
+#tfoot_table tr:last-child{
+    background-color: #0087c34a;
+}
+#company{
+    margin-top: 5%;
+}
+.tr-margen td{
+    padding-top: 130px;
+}
+
+#tfoot_taux{
+    float: left;
+    width: 40%;
+}
+#tfoot_taux .cell {
+    border: 1px solid black;
+    font-size: 10pt;
+    text-align:right;
+    padding:1px;
+}
+#tfoot_taux tr:first-child{
+    background-color:#0087c34a;
+}
+#tfoot_avance {
+    float: left;
+    width: 40%;
+    margin-top: 20px;
+}
+#tfoot_avance tr:first-child {
+    background-color: #0087c34a;
+}
+#tfoot_avance .cell {
+    border: 1px solid black;
+    font-size: 10pt;
+    text-align: right;
+    padding: 1px;
+}
+.Terms{
+    position: fixed;
+    bottom: 152px;
+    font-size: 14pt;
+    width: 740px;
+    margin: 20px;
+}

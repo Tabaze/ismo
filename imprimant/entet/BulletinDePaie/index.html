@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="http-equiv" content="Content-type: text/html; charset=UTF-8" />
+    <title>This is a title</title>
+    <link href="Style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <select id="chnage_model" class="noprint"></select>
+        <div id="main">
+            <div class="wrapper">
+                <div class="wrapper-table">
+                    <div style="display: flex;align-items: stretch;justify-content: space-between;">
+                        <h1 style="font-size: 25px;">Bulletin de paie</h1>
+                        <table class="infos_Entete">
+                            <tr>
+                                <td class="th_infos">Période De Paie</td>
+                            </tr>
+                            <tr>
+                                <td>Du : <span id="periodeD"></span> Au: <span id="periodeF"></span></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <table class="infos">
+                        <tr>
+                            <td class="th_infos">Matricule</td>
+                            <td class="th_infos" colspan="2">Nom et Prénom de l'employé</td>
+                            <td class="th_infos">Fonction</td>
+                            <td class="th_infos">Paie</td>
+                            <td class="th_infos">Service</td>
+                            <td class="th_infos">Categ</td>
+                        </tr>
+                        <tr>
+                            <td id="matricule"></td>
+                            <td colspan="2" id="nomEmploye"></td>
+                            <td id="nomFonction"></td>
+                            <td id="numPaie"></td>
+                            <td id="nomDepartement"></td>
+                            <td id="nomCategorie"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="7" id="adresse"></td>
+                        </tr>
+
+                    </table>
+                    <table class="infos">
+                        <tr>
+                            <td class="th_infos" colspan="3">Dates</td>
+                            <td class="th_infos" colspan="5"></td>
+                        </tr>
+                        <tr>
+                            <td class="th_infos">Naissance</td>
+                            <td class="th_infos">Embauche</td>
+                            <td class="th_infos">Paie</td>
+                            <td class="th_infos">Sit. Famil.</td>
+                            <td class="th_infos">CH</td>
+                            <td class="th_infos">CIN</td>
+                            <td class="th_infos">N° CNSS</td>
+                            <td class="th_infos">N° CIMR</td>
+                        </tr>
+                        <tr>
+                            <td id="dateNaissance">03/07/1998</td>
+                            <td id="dateEntree">28/02/2022</td>
+                            <td id="datePaie">10/04/2023</td>
+                            <td id="sitFamiliale">Mariée</td>
+                            <td>0</td>
+                            <td id="cinEmployee">L604649</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <table cellpadding="5" cellspacing="5" border="0" style="margin-top:30px;">
+                        <thead>
+                            <tr class="short_row">
+                                <th class="short_cell">Code</th>
+                                <th class="short_cell ">Libellé</th>
+                                <th class="short_cell ">Base</th>
+                                <th class="short_cell ">Taux</th>
+                                <th class="short_cell">Gain</th>
+                                <th class="short_cell">Retenu</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table_line">
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th colspan="2"></th>
+                                <th class="col_Footer_Infos">Mode Réglement</th>
+                                <th class="col_Footer_Infos">Total</th>
+                                <th class="col_Footer_Infos sumGains"></th>
+                                <th class="col_Footer_Infos sumRetenues"></th>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td class="col_Footer_Infos nomModRglm"></td>
+                                <td class="col_Footer_Infos">Net à Payer</td>
+                                <td class="col_Footer_Infos netApayer" colspan="2"></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <div id="div-foter">
+                        <!-- <table id="tfoot_table">
+                            <tbody>
+                               
+                            </tbody>
+                        </table> -->
+                        <table id="tfoot_conges">
+                            <tr>
+                                <td class="cell">J.Congé(N-1)</td>
+                                <td class="cell">J.Congé(N)</td>
+                                <td class="cell">J.Consommés</td>
+                                <td class="cell">J.Restés</td>
+                            </tr>
+                            <tr>
+                                <td class="tfoot_conges_col">0</td>
+                                <td class="tfoot_conges_col">1.5</td>
+                                <td class="tfoot_conges_col">0</td>
+                                <td class="tfoot_conges_col">1.5</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../../js/jquery-3.6.0.min.js" charset="utf-8"></script>
+    <script src="../../../vendors/sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="../../../js/moment.js" charset="utf-8"></script>
+    <script src="../../../js/currency.min.js"></script>
+    <script src="../../../js/menu.js"></script>
+    <script src="../../../js/i18n.js"></script>
+    <script src="../../../vendors/NombreEnLettre/JavaScript.js"></script>
+    <script src="../../../js/ittone.js"></script>
+    <script src="../../global.js"></script>
+    <script type="module" src="core.js" charset="UTF-8"></script>
+</body>
+
+</html>

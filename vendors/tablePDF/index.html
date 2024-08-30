@@ -1,0 +1,55 @@
+﻿<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+    <title id="head_title">Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <table id="title" class="title">
+    </table>
+    <table id="table" class="table">
+    </table>
+    <table id="footer" class="footer">
+    </table>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script src="jspdf.umd.js"></script>
+    <script src="jspdf.plugin.autotable.min.js"></script>
+    <script>
+        function generate(option,nomDossier) {
+            var doc = new jspdf.jsPDF(option);
+            doc.addFont("Amiri-Regular.ttf", "Amiri", "normal");
+            doc.text(10,10,nomDossier)
+            doc.autoTable({
+                html: '#title',
+                useCss: true,
+                styles: {
+                    font: 'Amiri',
+                    fontStyle: 'normal',
+                }
+            });
+            doc.autoTable({
+                html: '#table',
+                useCss: true,
+                styles: {
+                    font: 'Amiri',
+                    fontStyle: 'normal',
+                }
+            });
+            doc.autoTable({
+                html: '#footer',
+                useCss: true,
+                styles: {
+                    font: 'Amiri',
+                    fontStyle: 'normal',
+                }
+            });
+            const d = new Date();
+            doc.save($('#head_title').html() + "(" + d.getDay() + "-" + d.getMonth() + "-" + d.getFullYear() + ').pdf');
+        }
+    </script>
+</body>
+</html>

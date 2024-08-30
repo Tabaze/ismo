@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facture</title>
+    <style>
+        header * {
+            line-height: 5px;
+        }
+
+        header div {
+            width: 50%;
+        }
+
+        h5 {
+            font-weight: bolder !important;
+        }
+
+        tr * {
+            padding: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+        }
+
+        tr th:first-child {
+            width: 350px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table:first-of-type {
+            width: 100%;
+            margin: auto;
+        }
+
+        td {
+            font-weight: bold;
+        }
+
+        th {
+            background-color: #d9e2f3;
+        }
+    </style>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <div class="pageBreak">
+		<footer style="position: absolute;text-align: center;width: 95%;bottom: 0;">
+			<img src="../PIED PAGE ISMO.png" alt="" srcset="" style="width: 100%;bottom: 0;">
+		</footer>
+	</div>
+	<header style="text-align: center;">
+		<img src="../ENTETE ISMO.png" alt="" srcset="" width="90%">
+	</header>
+    <header style="
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    justify-content: space-around;
+    padding-left: 50px; height: 100%;
+">
+        <div>
+            <h2 class="numFact">Invoice 416</h2>
+            <h4>Date <span class="dateEntet">25-10-2021</span></h4>
+            <h4>Date d'échéance <span class="dateEcheache">25-10-2021</span></h4>
+        </div>
+        <div style="line-height: 16px;">
+            <h5>
+                <u>
+                    <span>
+                        Client :
+                    </span>
+                </u>
+                <span class="nom">
+
+                </span>
+            </h5>
+            <h5>
+                <u>
+                    <span>
+                        Numéro de commande :
+                    </span>
+                </u>
+                <span class="orderNumber" ></span>
+            </h5>
+            <h5>
+                <u>
+                    <span>
+                        Adresse de la société :
+                    </span>
+                </u>
+                <span class="adressCLient" style="font-size: 12px;">
+
+                </span>
+            </h5>
+            <h5>
+                <u>
+                    <span>
+                        Numéro de TVA :
+                    </span>
+                </u>
+                <span class="numeroTva">
+
+                </span>
+            </h5>
+            <h5>
+                <u>
+                    <span>
+                        Gérant de l'entreprise :
+                    </span>
+                </u>
+                <span class="companyManager " ></span>
+            </h5>
+            <h5>
+                <u>
+                    <span>
+                        Adresse de livraison :
+                    </span>
+                </u>
+                <span class="adressDelivery " ></span>
+            </h5>
+        </div>
+    </header>
+    <hr heigth="2">
+    <article>
+        <div>
+            <p style="font-weight: bolder;">Vente de matériel d'occasion en l'état <span
+                    style="color: red;">VENDU EXWORK</span></p>
+            <p style="font-weight: bolder;color: red;">HS code : <span class="hsCode">8480 2000 00</span></p>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Prix ​​par unité</th>
+                    <th>Quantité</th>
+                    <th>Prix ​​total</th>
+                </tr>
+            </thead>
+            <tbody id="lines">
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="3">
+                        Prix total sans TVA
+                    </th>
+                    <td class="total">
+
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+        <p style="line-height: normal;text-align: justify;">
+            Aucune garantie ne s'applique en aucun cas car l'équipement est utilisé. Tout le matériel d'occasion est vendu " tel quel
+             est - où est". <b>Le prix ne comprend pas les frais de transport</b> . Acheté par le système vu-acheté. Photos a
+             a été
+             envoyé
+        </p>
+        <p style="line-height: normal;text-align: center;display: none;">
+            <span style="color: red;"> Attestation d'origine</span> Période : Du 01.01.2021 au 31.12.2021.
+        </p>
+        <p style="line-height: normal;text-align: center;display: none;">
+            L'exportateur des produits couverts par ce document déclare que, sauf indication contraire clairement
+             indiqué,
+             ces produits sont d'origine préférentielle USA. 23.03.2021, Paris.
+        </p>
+        <table>
+            <tr>
+                <th>
+                    Conditions de paiement
+                </th>
+            </tr>
+            <tr>
+                <td class="paymentCondition" contenteditable>
+                    Virement. Paiement intégral après livraison.
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Coordonnées bancaires :
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    Crédit lyonnais (Paris ST MAUR-PARM)
+                     Adresse : 65 avenue de la république 75011 PARIS
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Paiement à:
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    IBAN : FR44 3000 2006 8200 0000 5880 E21
+                     Code BIC : CRLYFRPP
+                </td>
+            </tr>
+        </table>
+
+        <p style="line-height: normal;">
+            <span style="color: red;"> Pays d'origine : </span><select id="idPays"></select>
+        </p>
+        <p style="line-height: normal;">
+            MATERIEL DESTINE A L'EXPORTATION EXEMPTE DE
+        </p>
+        <p>
+            T.V.A. (Exportation de produit : une exonération de TVA s'applique)
+        </p>
+    </article>
+    <script src="../../../../js/jquery-3.6.0.min.js" charset="utf-8"></script>
+    <script src="../../../../vendors/select2/select2.full.min.js"></script>
+    <script src="../../../../vendors/sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="../../../../js/moment.js" charset="utf-8"></script>
+    <script src="../../../../js/currency.min.js"></script>
+    <script src="../../../../js/menu.js"></script>
+    <script src="../../../../js/i18n.js"></script>
+    <script src="../../../../js/ittone.js"></script>
+    <script src="../../../global.js"></script>
+    <script type="module" src="../core.js" charset="UTF-8"></script>
+</body>
+
+</html>
